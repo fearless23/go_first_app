@@ -1,0 +1,18 @@
+<h1>{{.Title}}</h1>
+
+<div style="max-width: 990px; margin: 1em auto;">
+  {{range $key, $value := .News}}
+
+  <div style="margin-bottom: 1em; padding: 1em;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.31)
+  ">
+    <h1>{{$key}}. {{$value.Title}}</h1>
+    <p>Keywords: {{$value.Keyword}}</p>
+    <p>Date: {{$value.Date}}</p>
+    <p><a href="{{$value.Location}}" target="_blank">Visit Story</a></p>
+  </div>
+
+  {{end}}
+</div>
